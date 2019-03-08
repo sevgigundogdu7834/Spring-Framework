@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="EmployeeId" class="setter_DependecyInjection.Employee">
+        <property name="name" value="Sevgi"/>
+        <property name="surname" value="Gündoğdu"/>
+        <property name="salary" value="3200"/>
+        <property name="department" ref="DepartmentId2"/>
+    </bean>
+
+    <bean id="DepartmentId" class="setter_DependecyInjection.Department">
+        <property name="departmentName" value="IT"/>
+    </bean>
+
+    <bean id="DepartmentId2" class="setter_DependecyInjection.Department"
+          p:departmentName="Computer Engineering"/>
+
+
+</beans>

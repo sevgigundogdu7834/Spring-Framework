@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="lassaId" class="tekrar_spring.Lassa"/>
+    <bean id="petlasId" class="tekrar_spring.Petlas"/>
+    <bean id="goodYearId" class="tekrar_spring.GoodYear"/>
+
+    <bean id="carId" class="tekrar_spring.Car">
+        <property name="wheel" ref="lassaId"/>
+    </bean>
+
+    <bean id="busId" class="tekrar_spring.Bus">
+        <property name="wheel" ref="goodYearId"/>
+    </bean>
+</beans>
